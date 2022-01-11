@@ -48,6 +48,7 @@ RUN apk --no-cache --no-progress upgrade && \
     echo 'TransPort 0.0.0.0:9040' >>/etc/tor/torrc && \
     echo 'User tor' >>/etc/tor/torrc && \
     echo 'VirtualAddrNetworkIPv4 10.192.0.0/10' >>/etc/tor/torrc && \
+    echo 'MaxCircuitDirtiness 1' >>/etc/tor/torrc && \
     mkdir -p /etc/tor/run && \
     chown -Rh tor. /var/lib/tor /etc/tor/run && \
     chmod 0750 /etc/tor/run && \
